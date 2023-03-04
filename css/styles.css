@@ -1,0 +1,25 @@
+/* Tag Selectors */
+/*
+    img {background-color: red;}
+*/
+    body {background-color: #bbf9f9;}
+
+    h3 {}
+    hr {background-color: white;
+        border-style: none;
+        border-top-style: dotted;
+        border-color: lightgrey;
+        border-width: 8px;
+        width: 5%;
+        height: 0px;}
+    h1 {color: #66bfbf;}
+
+
+    /* Class Selectors */
+
+    .bacon {background-color: red;}
+    .brocolli {background-color: green;}
+
+
+
+
