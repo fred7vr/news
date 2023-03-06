@@ -2,23 +2,63 @@
 /*
     img {background-color: red;}
 */
-    body {background-color: #bbf9f9;}
+    body {background-color: #eaf6f6;
+        text-align: center;
+        width:60%;
 
-    h3 {}
+    
+    }
+
+    h3 { text-align: left;
+    font-size:2rem;}
     hr {background-color: white;
         border-style: none;
         border-top-style: dotted;
         border-color: lightgrey;
         border-width: 8px;
         width: 5%;
-        height: 0px;}
-    h1 {color: #66bfbf;}
+        height: 0px;
+       }
+    h1 {color: #66bfbf;
+        font-size:3rem;
+        
+    }
+    h2 {font-size:2rem;}
 
-
+p {font-size:2rem;}
     /* Class Selectors */
 
-    .bacon {background-color: red;}
-    .brocolli {background-color: green;}
+ a:hover { 
+    color:#6A2C70;
+ }
+
+
+    .btn {
+        background: #11cdd4;
+        background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+        background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+        background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+        background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+        background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+        -webkit-border-radius: 8;
+        -moz-border-radius: 8;
+        border-radius: 8px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+      }
+      
+      .btn:hover {
+        background: #30e3cb;
+        background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+        background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+        background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+        background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+        background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+        text-decoration: none;
+      }
 
 
 
