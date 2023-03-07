@@ -2,16 +2,45 @@
 /*
     img {background-color: red;}
 */
-    body {background-color: #eaf6f6;
-        text-align: center;
-        width:90%;
 
-    
-    }
+#title {
+    background-color: #ff9494;
+    color:white;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+font-size:3rem;
+line-height:1.5;}
+    button {
+font-family: 'Ubuntu', sans-serif;
+}
+
+.container-fluid {
+    padding:3% 15%;
+}
+
+body {font-family: 'Montserrat', sans-serif;}
+
+.navbar-brand {color:#FFF;
+font: size 2rem;
+font-family:"ubantu";}
+.ms-auto {color:#FFF;}
+
+#features {
+    background-color: #ffe3e1;
+    width=80%;
+}
+
+#Appointment {
+    background-color: #ff9494;
+    width=80%;
+}
+
+
 
     h3 { text-align: left;
     font-size:2rem;}
-    hr {background-color: white;
+    hr {
         border-style: none;
         border-top-style: dotted;
         border-color: lightgrey;
@@ -19,20 +48,30 @@
         width: 5%;
         height: 0px;
        }
-    h1 {color: #66bfbf;
+    h1 {color: #fff;
         font-size:3rem;
         
     }
     h2 {font-size:2rem;}
 
-p {font-size:2rem;}
+p {font-size:2rem;} 
+
     /* Class Selectors */
 
  a:hover { 
-    color:#6A2C70;
+    
  }
 
+ .landing-page {
+    padding: 0px ;
+    width: 90%;
 
+ }
+.introduction {
+
+    line-height:1.5;
+    padding-left: 20px;;
+}
     .btn {
         background: #11cdd4;
         background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
