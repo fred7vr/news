@@ -62,9 +62,7 @@ p {font-size:2rem;}
     
  }
 
- .landing-page {
-    padding: 0px ;
-    width: 90%;
+
 
  }
 .introduction {
@@ -100,5 +98,23 @@ p {font-size:2rem;}
       }
 
 
+.nav-link {
+    font-size:1.2rem;
+}
 
+.title-image {
+    width:60%;
+    transform:rotate(25deg);
+    /* transform:rotateY(25deg);
+    transform:rotate3d(1,-1,1,45deg); */
+}
+p {line-height:2;}
 
+.recommendations {
+    background-color:#ffe3e1;
+    margin-bottom:40px;
+}
+
+.conclusions {
+    background-color:#ff9494;
+}
