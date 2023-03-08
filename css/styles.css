@@ -28,12 +28,12 @@ font-family:"ubantu";}
 
 #features {
     background-color: #ffe3e1;
-    width=80%;
+    width:80%;
 }
 
 #Appointment {
     background-color: #ff9494;
-    width=80%;
+    width:80%;
 }
 
 
@@ -58,13 +58,10 @@ p {font-size:2rem;}
 
     /* Class Selectors */
 
- a:hover { 
-    
- }
 
 
 
- }
+ 
 .introduction {
 
     line-height:1.5;
