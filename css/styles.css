@@ -4,9 +4,10 @@
 */
 
 #title {
-    background-color: #ff9494;
+    background-color: #40513b;
     color:white;
 }
+
 h1 {
     font-family: 'Montserrat', sans-serif;
 font-size:3rem;
@@ -17,6 +18,7 @@ font-family: 'Ubuntu', sans-serif;
 
 .container-fluid {
     padding:3% 15%;
+
 }
 
 body {font-family: 'Montserrat', sans-serif;}
@@ -24,15 +26,20 @@ body {font-family: 'Montserrat', sans-serif;}
 .navbar-brand {color:#FFF;
 font: size 2rem;
 font-family:"ubantu";}
+
+.navbar-brand:hover {
+    color:grey;
+}
 .ms-auto {color:#FFF;}
 
 #features {
-    background-color: #ffe3e1;
+    background-color: #9dc08b;
+    position:relative;
+    
 }
 
 #Appointment {
-    background-color: #ff9494;
-    
+    background-color: #609966;
 }
 
 
@@ -58,7 +65,10 @@ p {font-size:2rem;}
     /* Class Selectors */
 
 
-
+#viewpoint-dis {
+    background-color: #edf1d6;
+    position:relative;
+}
 
  
 .introduction {
@@ -66,7 +76,7 @@ p {font-size:2rem;}
     line-height:1.5;
     padding-left: 20px;;
 }
-    .btn {
+    /* .btn {
         background: #11cdd4;
         background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
         background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
@@ -91,26 +101,34 @@ p {font-size:2rem;}
         background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
         background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
         text-decoration: none;
-      }
+      } */
 
 
-.nav-link {
-    font-size:1.2rem;
-}
+
 
 .title-image {
-    width:60%;
+    width:10%;
     transform:rotate(25deg);
-    /* transform:rotateY(25deg);
-    transform:rotate3d(1,-1,1,45deg); */
+    position:absolute;
+    right:25%;
 }
 p {line-height:2;}
 
 .recommendations {
-    background-color:#ffe3e1;
+    background-color: #609966;
     margin-bottom:40px;
 }
 
 .conclusions {
-    background-color:#ff9494;
+    background-color:#609966;
+}
+
+#history {
+    background-color: #9dc08b;
+    position: relative;
+    height:1000px;
+}
+
+.btn {
+    margin:10px;
 }
