@@ -1,27 +1,49 @@
-/* Tag Selectors */
-/*
-    img {background-color: red;}
-*/
+/* HTML elements */
+body {font-family: 'Montserrat', sans-serif;}
 
+
+h2 {font-size:2.5rem;}
+
+h3 { text-align: left;
+    font: size 2rem;}
+
+p {font-size:1.5rem;
+    line-height:2;
+} 
+  
+
+
+/* Title section */
 #title {
-    background-color: #40513b;
+    background-color: #1c3879;
     color:white;
 }
 
-h1 {
-    font-family: 'Montserrat', sans-serif;
-font-size:3rem;
-line-height:1.5;}
-    button {
-font-family: 'Ubuntu', sans-serif;
+.daily-news-title {
+    font-size:3rem;
+    color: #fff;
+    line-height:1.5;
 }
+
+
+/* Container section */
 
 .container-fluid {
     padding:3% 15%;
-
 }
 
-body {font-family: 'Montserrat', sans-serif;}
+/* background section */
+.white-bkgd {
+    background-color: #fff;
+    
+}
+
+.color-bkgd {
+    color:#FFF;
+    background-color: #607eaa;
+}
+
+/* Navigation Bar section */
 
 .navbar-brand {color:#FFF;
 font: size 2rem;
@@ -32,37 +54,39 @@ font-family:"ubantu";}
 }
 .ms-auto {color:#FFF;}
 
-#features {
-    background-color: #9dc08b;
+.nav-link {
+    color:#fff;
+
+}
+
+
+
+/* News section */
+#daily-news {
+    background-color: #fff;
     position:relative;
     
 }
 
+/* Opinions section */
+
+#Opinions {
+    background-color:#607eaa;
+    color:#fff;
+}
+
+.opinion-image {
+    margin:5%;
+}
+
+/* Appointment section */
 #Appointment {
-    background-color: #609966;
+    background-color: #1c3879;
+    color:#FFF
 }
 
 
-
-    h3 { text-align: left;
-    font-size:2rem;}
-    hr {
-        border-style: none;
-        border-top-style: dotted;
-        border-color: lightgrey;
-        border-width: 8px;
-        width: 5%;
-        height: 0px;
-       }
-    h1 {color: #fff;
-        font-size:3rem;
-        
-    }
-    h2 {font-size:2rem;}
-
-p {font-size:2rem;} 
-
-    /* Class Selectors */
+/* Class Selectors */
 
 
 #viewpoint-dis {
@@ -76,33 +100,7 @@ p {font-size:2rem;}
     line-height:1.5;
     padding-left: 20px;;
 }
-    /* .btn {
-        background: #11cdd4;
-        background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
-        background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
-        background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
-        background-image: -o-linear-gradient(top, #11cdd4, #11999e);
-        background-image: linear-gradient(to bottom, #11cdd4, #11999e);
-        -webkit-border-radius: 8;
-        -moz-border-radius: 8;
-        border-radius: 8px;
-        font-family: Arial;
-        color: #ffffff;
-        font-size: 20px;
-        padding: 10px 20px 10px 20px;
-        text-decoration: none;
-      }
-      
-      .btn:hover {
-        background: #30e3cb;
-        background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
-        background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
-        background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
-        background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
-        background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
-        text-decoration: none;
-      } */
-
+    
 
 
 
@@ -112,22 +110,43 @@ p {font-size:2rem;}
     position:absolute;
     right:25%;
 }
-p {line-height:2;}
+
 
 .recommendations {
-    background-color: #609966;
+    background-color: #607eaa;
+    color:#FFF;
     margin-bottom:40px;
 }
 
 .conclusions {
-    background-color:#609966;
+    background-color:#1c3879;
 }
 
+/* History section */
+
 #history {
-    background-color: #9dc08b;
+    background-color: #607eaa;
     position: relative;
 }
 
-.btn {
-    margin:10px;
+.history-icon {
+    margin:15%;
+}
+
+/* Tools section */
+/* 
+#faq p {
+    color:#FFF; 
+} */
+
+.table-for-business {
+    text-align: center;
+    background-color:antiquewhite;
+    border-style:double;
+    margin:3%;
+}
+
+.table-entries {
+    margin:3%;
+    border-style:double;
 }
