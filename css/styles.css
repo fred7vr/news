@@ -56,7 +56,6 @@ font-family:"ubantu";}
 
 .nav-link {
     color:#fff;
-
 }
 
 
@@ -82,7 +81,7 @@ font-family:"ubantu";}
 /* Appointment section */
 #Appointment {
     background-color: #1c3879;
-    color:#FFF
+    color:#FFF;
 }
 
 
@@ -127,6 +126,7 @@ font-family:"ubantu";}
 #history {
     background-color: #607eaa;
     position: relative;
+    color:#fff;
 }
 
 .history-icon {
