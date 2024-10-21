@@ -139,15 +139,17 @@
 
 </body>
 
+
 <script>
-    // Function to format the date in the desired format
     function formatDate(date) {
-        const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
-        return date.toLocaleDateString('zh-Hans-CN', options);
+        const day = date.getDate();
+        const month = date.getMonth() + 1; // Months are zero-based
+        return `${month}月${day}日`; // Format as "MM月DD日"
     }
 
-    // Set the current date to the span
     document.getElementById('news-date').textContent = formatDate(new Date());
 </script>
+
+
 
 </html>
