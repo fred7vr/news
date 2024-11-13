@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Fred's 财经频道</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <section id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-dark  ">
+                <a class="navbar-brand" href="index.html">Fred's News Channel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Calender-main.html">每日新闻 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="viewpoint.html">投资观点 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">常用工具 </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-12" style=" border:none">
+                    <h1 class="daily-news-title"><span id="news-date"></span>早间新闻</h1>
+
+                    <h2>根据彭博社及路透社新闻编辑整合</h2>
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-12" style="border:none">
+                    <img class="title-image" src="img/stockmarket.png" alt="stockmarket">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="daily-news">
+        <div class="container-fluid">
+            <h3>
+                <ol class="white-bkgd">
+
+
+
+
+
+                    <li>特朗普宣布提名对华态度鹰派的麦克·沃尔兹出任总统国家安全顾问，受到中国制裁的 参议员卢比奥料将成为国务卿。</li><br>
+
+                    <li>明尼阿波利斯联储行长表示，只有通胀高于预期，美联储才可能12月暂停降息，很难想象从现在到12月份劳动力市场会真正升温。</li><br>
+
+                    <li>因中国需求放缓，OPEC连续第四个月下调今年和明年的全球石油需求增长预期。</li><br>
+
+                    <li>苹果据悉准备推出带AI功能的壁挂式平板设备，瞄准智能家居市场。</li><br>
+
+                    <li>在美上市中概股指数隔夜重挫，创近七周最低，特朗普料重用对华鹰派人士主管外交和国安事务，恐加剧美中紧张关系。</li>
+
+
+
+
+
+
+
+
+
+
+
+                </ol>
+
+            </h3>
+
+
+        </div>
+    </section>
+
+    <section id="Opinions">
+        <div class="container-fluid color bkgd">
+            <h3>个人观点：比特币上天了，美国长期国债收益率回撤到了年初的4.56%，然后中概股集体暴跌。特朗普上台的经济效应还没完全体现出来。<br>
+                一团乱啊。<br>
+
+              
+
+            </h3>
+
+
+
+
+
+            <a class="btn btn-lg btn-primary" href="Calender-main.html">查看其他日期的新闻</a>
+        </div>
+    </section>
+
+
+
+    <section id="Appointment">
+        <div class="container-fluid">
+
+
+            <table cellspacing="20">
+                <tbody>
+                    <tr>
+                        <td> <img src="fred-modified.png" alt="Fred Rong's profile pic" width="180px"></td>
+                        <td class="introduction">
+                            <h2> Fred Rong <br>MAS Registered <br>RF-300558704 <br>
+                                投资咨询,欢迎预约！</h2>
+                            <a class="btn btn-lg btn-primary" href="Contact-me.html">立即预约</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+
+
+<script>
+    function formatDate(date) {
+        const day = date.getDate();
+        const month = date.getMonth() + 1; // Months are zero-based
+        return `${month}月${day}日`; // Format as "MM月DD日"
+    }
+
+    document.getElementById('news-date').textContent = formatDate(new Date());
+</script>
+
+
+
+</html>
