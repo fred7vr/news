@@ -48,12 +48,31 @@
                 </div>
             </nav>
             <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12" style=" border:none">
+                <div class="col-lg-9 col-md-9 col-sm-12" style="border:none">
                     <h1 class="daily-news-title"><span id="news-date"></span>早间新闻</h1>
-
                     <h2>根据彭博社及路透社新闻编辑整合</h2>
+                    <a href="https://omny.fm/shows/bloomberg-audio/11-18" 
+                       class="btn btn-primary btn-lg d-inline-flex align-items-center gap-2" 
+                       target="_blank"
+                       style="margin-top: 1rem;">
+                        <svg class="w-5 h-5" 
+                             width="20" 
+                             height="20" 
+                             fill="none" 
+                             stroke="currentColor" 
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" 
+                                  stroke-linejoin="round" 
+                                  stroke-width="2" 
+                                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" 
+                                  stroke-linejoin="round" 
+                                  stroke-width="2" 
+                                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        收听Bloomberg音频
+                    </a>
                 </div>
-
 
                 <div class="col-lg-3 col-md-3 col-sm-12" style="border:none">
                     <img class="title-image" src="img/stockmarket.png" alt="stockmarket">
@@ -66,62 +85,34 @@
         <div class="container-fluid">
             <h3>
                 <ol class="white-bkgd">
+                    <li>波士顿联储行长称，12月降息仍在考虑之中，预计通胀会可持续地朝着2%目标回落。芝加哥联储行长表示，只要通胀率继续向目标靠拢，未来12-18个月利率将大幅下降。</li><br>
 
-
-
-
-
-                    <li>美联储主席鲍威尔表示，近期美国经济表现相当好，给了央行在降息方面谨慎行事的空间。在接近所谓的中性利率水平时，央行可能会放慢降息步伐。</li><br>
-
-                    <li>利率互换市场定价显示，鲍威尔发言后美联储12月降息25个基点的概率不足五成。</li><br>
+                    <li>俄罗斯总统普京与德国总理朔尔茨近两年来首次直接通话，讨论了结束乌克兰战争的途径。泽连斯基表示，乌克兰必须尽一切努力在2025年结束战争。</li><br>
 
                     <li>截至周三当周，美国货币市场基金资产规模增加约910亿美元，首次超过7万亿美元。</li><br>
 
-                    <li>因违反反垄断规定，Meta被欧盟罚款7.98亿欧元。该公司表示将提起上诉 。</li><br>
+                    <li>知情人士称，美国即将做出最终决定，允许乌克兰使用西方制造的武器打击俄罗斯境内有限军事目标。</li><br>
 
-                    <li>美国股市：主要股指普跌，美国10月PPI加速上升和鲍威尔的偏鹰派讲话打压了降息预期。</li>
+                    <li>知情人士称，如果平壤和莫斯科之间的合作继续深化，朝鲜可能会向俄罗斯派遣多达10万名士兵协助对乌作战。</li>
 
-
-
-
-
-
-
-
-
-
-
+                    <li>中国国家主席习近平与美国总统拜登周六在秘鲁会晤，习近平借此次会晤向候任总统特朗普释放出愿意合作的信号，同时亮出四条不容挑战的红线，即台湾问题、民主人权、道路制度和发展权利。</li>
                 </ol>
-
             </h3>
-
-
         </div>
     </section>
 
     <section id="Opinions">
         <div class="container-fluid color bkgd">
-            <h3>个人观点：美国大选结束了8天了，目前看带来的影响真的很深远。<br>
-                货币基金市场的7万亿美元，是从哪里流来的？这么大的流动性，中期的确看好美国股市。<br>
-
-                <img class="titleimage" src="img/11Nov2024.png" alt="dailynewspic" width=80%><br>
-
+            <h3>个人观点：上周五特朗普单选热度退潮，加上鲍威尔发言给12月降息降温，导致美国股市大跌。<br>
+                应该是走出了过去2个月最大的单周回撤。<br>
             </h3>
-
-
-
-
 
             <a class="btn btn-lg btn-primary" href="Calender-main.html">查看其他日期的新闻</a>
         </div>
     </section>
 
-
-
     <section id="Appointment">
         <div class="container-fluid">
-
-
             <table cellspacing="20">
                 <tbody>
                     <tr>
@@ -136,9 +127,7 @@
             </table>
         </div>
     </section>
-
 </body>
-
 
 <script>
     function formatDate(date) {
@@ -149,7 +138,5 @@
 
     document.getElementById('news-date').textContent = formatDate(new Date());
 </script>
-
-
 
 </html>
