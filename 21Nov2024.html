@@ -1,0 +1,133 @@
+import sys
+import os
+sys.path.append("PYPYPY/Stock_analysis/21Nov2024")
+
+from heston_option_premium_calculation import CombinedPortfolioAnalyzer, LEAPSAnalyzer
+from portfolio_visualizer import PortfolioVisualizer
+import pandas as pd
+import numpy as np
+from typing import Dict, List, Tuple
+import concurrent.futures
+from tqdm import tqdm
+
+class PortfolioCombinationAnalyzer:
+def __init__(self,
+total_capital: float = 10000000,
+call_itm_amount: float = 35,
+put_itm_amount: float = 15,
+cycle_days: int = 360,
+bond_return: float = 0.07,
+start_date: str = '2004-01-01'):
+
+self.total_capital = total_capital
+self.call_itm_amount = call_itm_amount
+self.put_itm_amount = put_itm_amount
+self.cycle_days = cycle_days
+self.bond_return = bond_return
+self.start_date = start_date
+
+def analyze_combination(self, call_pct: float, put_pct: float) -> Dict:
+"""Analyze a specific combination of call and put allocations"""
+try:
+# Calculate bond percentage as remainder
+bond_pct = 100 - call_pct - put_pct
+
+# Initialize analyzer with current allocation
+analyzer = CombinedPortfolioAnalyzer(
+total_capital=self.total_capital,
+call_itm_amount=self.call_itm_amount,
+put_itm_amount=self.put_itm_amount,
+cycle_days=self.cycle_days,
+bond_return=self.bond_return,
+start_date=self.start_date
+)
+
+# Set allocations
+analyzer.bond_allocation = bond_pct / 100
+analyzer.leaps_allocation = call_pct / 100
+analyzer.put_allocation = put_pct / 100
+
+# Recalculate capital allocations
+analyzer.bond_capital = analyzer.total_capital * analyzer.bond_allocation
+analyzer.leaps_capital = analyzer.total_capital * analyzer.leaps_allocation
+analyzer.put_capital = analyzer.total_capital * analyzer.put_allocation
+
+# Update LEAPS analyzer
+analyzer.leaps_analyzer = LEAPSAnalyzer(
+capital=analyzer.leaps_capital,
+itm_amount=self.call_itm_amount,
+cycle_days=self.cycle_days,
+start_date=self.start_date
+)
+
+# Run analysis
+results = analyzer.run_analysis()
+
+# Calculate percentiles of total returns
+returns = results['Total_Return_%']
+percentiles = [5, 25, 50, 75, 95]
+percentile_values = np.percentile(returns, percentiles)
+
+# Create result dictionary
+result = {
+'Call_%': call_pct,
+'Put_%': put_pct,
+'Bond_%': bond_pct,
+}
+
+# Add percentile values
+for p, v in zip(percentiles, percentile_values):
+result[f'P{p}_%'] = v
+
+return result
+
+except Exception as e:
+print(f"Error analyzing {call_pct}% call, {put_pct}% put: {str(e)}")
+return None
+
+def analyze_all_combinations(self):
+"""Analyze all combinations from 0-10% in 1% steps"""
+combinations = []
+results = []
+
+# Generate all valid combinations
+for call_pct in range(0, 11):
+for put_pct in range(0, 11):
+if call_pct + put_pct <= 10: # Ensure total allocation ≤ 10% combinations.append((call_pct, put_pct)) print(f"Analyzing
+    {len(combinations)} combinations...") # Use ThreadPoolExecutor for parallel processing with
+    concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor: # Create future tasks future_to_combo={
+    executor.submit(self.analyze_combination, call_pct, put_pct): (call_pct, put_pct) for call_pct, put_pct in
+    combinations } # Process results as they complete for future in
+    tqdm(concurrent.futures.as_completed(future_to_combo), total=len(combinations)): result=future.result() if result is
+    not None: results.append(result) # Create DataFrame and sort by median return (P50) df=pd.DataFrame(results)
+    df=df.sort_values('P50_%', ascending=False) # Round all percentile columns to 2 decimal places percentile_cols=[col
+    for col in df.columns if col.startswith('P')] df[percentile_cols]=df[percentile_cols].round(2) return df def
+    save_results_to_excel(df: pd.DataFrame, filename: str='portfolio_combinations.xlsx'
+    ): """Save results to Excel with formatted output""" # Create Excel writer object with pd.ExcelWriter(filename,
+    engine='openpyxl' ) as writer: # Write main results df.to_excel(writer, sheet_name='All Combinations' , index=False)
+    # Write top 10 combinations to separate sheet df.head(10).to_excel(writer, sheet_name='Top 10 Combinations' ,
+    index=False) # Create summary sheet best_combo=df.iloc[0] summary_data={ 'Metric' : [ 'Best Allocation - Calls (%)'
+    , 'Best Allocation - Puts (%)' , 'Best Allocation - Bonds (%)' , '95th Percentile Return (%)'
+    , '75th Percentile Return (%)' , 'Median Return (%)' , '25th Percentile Return (%)' , '5th Percentile Return (%)'
+    ], 'Value' : [ best_combo['Call_%'], best_combo['Put_%'], best_combo['Bond_%'], best_combo['P95_%'],
+    best_combo['P75_%'], best_combo['P50_%'], best_combo['P25_%'], best_combo['P5_%'] ] }
+    pd.DataFrame(summary_data).to_excel(writer, sheet_name='Summary' , index=False) def main(): # Initialize analyzer
+    analyzer=PortfolioCombinationAnalyzer( total_capital=10000000, call_itm_amount=35, put_itm_amount=15,
+    cycle_days=360, bond_return=0.07, start_date='2004-01-01' ) # Run analysis
+    results=analyzer.analyze_all_combinations() # Save results to Excel save_results_to_excel(results) # Display results
+    pd.set_option('display.max_rows', None) pd.set_option('display.float_format', '{:.2f}' .format) print("\nPortfolio
+    Combination Analysis Results:") print("=" * 100)
+    print(results)
+    
+    # Print top 5 combinations by median return
+    print(" \nTop 5 Combinations by Median Return:") print("=" * 100)
+    print(results.head())
+    
+    # Print summary statistics
+    print(" \nSummary of Best Combination:") print("=" * 100)
+    best_combo = results.iloc[0]
+    print(f" Best Allocation:") print(f"Calls: {best_combo['Call_%']}%") print(f"Puts: {best_combo['Put_%']}%")
+    print(f"Bonds: {best_combo['Bond_%']}%") print("\nReturn Distribution:") print(f"95th Percentile:
+    {best_combo['P95_%']:.2f}%") print(f"75th Percentile: {best_combo['P75_%']:.2f}%") print(f"Median Return:
+    {best_combo['P50_%']:.2f}%") print(f"25th Percentile: {best_combo['P25_%']:.2f}%") print(f"5th Percentile:
+    {best_combo['P5_%']:.2f}%") if __name__=="__main__" : main()

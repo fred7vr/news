@@ -52,7 +52,8 @@
                 <div class="col-lg-9 col-md-9 col-sm-12" style="border:none">
                     <h1 class="daily-news-title"><span id="news-date"></span>早间新闻</h1>
                     <h2>根据彭博社及路透社新闻编辑整合</h2>
-                    <a id="bloomberg-audio-link" class="btn btn-primary btn-lg d-inline-flex align-items-center gap-2" target="_blank" style="margin-top: 1rem;">
+                    <a id="bloomberg-audio-link" class="btn btn-primary btn-lg d-inline-flex align-items-center gap-2"
+                        target="_blank" style="margin-top: 1rem;">
                         <svg class="w-5 h-5" width="20" height="20" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -73,15 +74,15 @@
         <div class="container-fluid">
             <h3>
                 <ol class="white-bkgd">
-                    <li>俄乌战争进入危险新阶段，在莫斯科提高核威慑当日，乌克兰首次使用美制远程导弹袭击俄境内目标。避险情绪席卷金融市场，欧洲国防股大涨，卢布汇率跌至13个月低点。</li><br>
+                    <li>英伟达第四财季营收展望低于市场最高预期，CEO黄仁勋表示Blackwell的新产品线已进入“满负荷生产”状态，将持续几个季度供不应求。</li><br>
 
-                    <li>泽连斯基排除了在国家主权和领土问题上让步的可能性，敦促德国及其盟友允许乌克兰对俄实施远程打击。</li><br>
+                    <li>乌克兰据悉首次向俄罗斯境内军事目标发射英国制造的“暴风影”导弹。《华盛顿邮报》称，拜登再次改变立场，批准向乌克兰提供反步兵地雷。</li><br>
 
                     <li>继上海和北京之后，深圳也取消了普通住房和非普通住房标准，新规将于12月1日起实施。</li><br>
 
-                    <li>比特币周二再创历史新高，一度飙升至93,625美元，自特朗普赢得大选以来累计上涨大约40%。</li><br>
+                    <li>比特币连续第二天创新高，一度逼近9.5万美元，MicroStrategy加大发债力度为购币筹资。</li><br>
 
-                    <li>美国股市：标普500指数收高，英伟达股价在公布业绩前夕大涨。</li>
+                    <li>美国股市：标普500指数持稳，大型科技股在盘后交易中小幅走低，英伟达营收展望未达最高预期。</li>
 
 
 
@@ -92,8 +93,8 @@
 
     <section id="Opinions">
         <div class="container-fluid color bkgd">
-            <h3>个人观点：昨天拜登缺席G20领导人合照算个大事件了，据小道消息说，是会后拜登带着两个小跟班去场地外遛弯聊天，以为大家都会等他们回来再合影，但等他们回来的时候，其他领导人已经合影结束离开了。<br><br>
-                乌克兰远程攻击俄罗斯境内目标也是第一次，6发导弹一发命中，5发被拦截。拜登跟民主党这是要留个烂摊子给特朗普？？？<br>
+            <h3>个人观点：有没有世界正在进入经济衰退的感觉？<br><br>
+                <br>
             </h3>
 
             <a class="btn btn-lg btn-primary" href="Calender-main.html">查看其他日期的新闻</a>
@@ -127,18 +128,18 @@
 
     document.getElementById('news-date').textContent = formatDate(new Date());
 
-     // Get today's date in MM-DD format
-     function getTodaysDate() {
-            const today = new Date();
-            const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Add leading zero if needed
-            const day = today.getDate().toString().padStart(2, '0'); 
-            return `${month}-${day}`;
-        }
+    // Get today's date in MM-DD format
+    function getTodaysDate() {
+        const today = new Date();
+        const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Add leading zero if needed
+        const day = today.getDate().toString().padStart(2, '0');
+        return `${month}-${day}`;
+    }
 
-        // Update the Bloomberg audio link
-        const audioLink = document.getElementById('bloomberg-audio-link');
-        audioLink.href = `https://omny.fm/shows/bloomberg-audio/${getTodaysDate()}`; 
-    </script>
+    // Update the Bloomberg audio link
+    const audioLink = document.getElementById('bloomberg-audio-link');
+    audioLink.href = `https://omny.fm/shows/bloomberg-audio/${getTodaysDate()}`; 
+</script>
 
 
 
