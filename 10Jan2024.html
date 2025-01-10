@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <title>Fred's 财经频道</title>
     <link rel="icon" href="favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  
-    <!-- Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-  <!-- CSS Style -->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS Style -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
     <section id="title">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-dark  ">
-                <a class ="navbar-brand" href="index.html">Fred's News Channel</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="index.html">Fred's News Channel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        
+
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="Calender-main.html">每日新闻 </a>
@@ -34,22 +42,31 @@
                             <a class="nav-link" href="viewpoint.html">投资观点 </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="faq.html" >常用工具 </a>
+                            <a class="nav-link" href="faq.html">常用工具 </a>
                         </li>
-                    </ul>  
+                    </ul>
                 </div>
             </nav>
-             <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12" style=" border:none">
-                    <h1 class="daily-news-title">1月10日早间新闻</h1>
+
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-12" style="border:none">
+                    <h1 class="daily-news-title"><span id="news-date"></span>早间新闻</h1>
                     <h2>根据彭博社及路透社新闻编辑整合</h2>
-                </div>
-
-
-                 <div class="col-lg-3 col-md-3 col-sm-12" style="border:none">
-                    <img class="title-image" src="img/stockmarket.png" alt="stockmarket">
+                    <a id="bloomberg-audio-link" class="btn btn-primary btn-lg d-inline-flex align-items-center gap-2"
+                        target="_blank" style="margin-top: 1rem;">
+                        <svg class="w-5 h-5" width="20" height="20" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        收听Bloomberg音频
+                    </a>
                 </div>
             </div>
+
+
         </div>
     </section>
 
@@ -57,56 +74,82 @@
         <div class="container-fluid">
             <h3>
                 <ol class="white-bkgd">
-                   
-                   
-                    <li>世界银行发布全球经济展望报告，预计中国今年GDP增速降至4.5%，并警告世界经济在后疫情时代复苏乏力。</li><br>
-                   
-                  <li>据悉美国及其盟国上月与乌克兰秘密举行会议，商讨“和平计划”，但俄罗斯未受邀而中国也缺席。</li><br>
-                   
-                  <li>石油市场大量看涨期权易手，交易员押注未来几个月布伦特油价突破110美元/桶。</li><br>
+                    <li>多位美联储官员证实利率可能会在当前水平维持较长时间，只有通胀明显降温的情况下才会再次降息。</li>
+                    <br>
 
-                  <li>今日闹剧：美国证券交易委员会(SEC)主席Gensler称该机构社交媒体账号遭入侵，SEC尚未批准比特币ETF产品上市和交易。</li>
-                   
+                    <li>美国周五将发布12月非农就业报告，BMO策略师预测，若数据低于预期，债市将涌现较强买盘。Challenger报告显示，美国12月份宣布的裁员人数同比增长11.4%。</li><br>
+
+                    <li>洛杉矶失控的火势已致至少5人遇难，近18万人被疏散，摩根大通预测保险业面临的损失将超过200亿美元。</li><br>
+
+                    <li>特朗普计划在1月20日就职后数个小时内就移民、能源、监管改革等问题发布一系列行政命令，力争迅速全面落实其施政方针。</li><br>
+
+
+
+
+
                 </ol>
-                            
             </h3>
-
-            
         </div>
     </section>
 
-<section id="Opinions">
-    <div class="container-fluid color bkgd">
-        <h3>个人观点：</h3>
-                <h3>引用下今天看到的Pimco的预测：“尽管收益率已较去年高点大幅回落，但债券投资者2024年仍可获得类似股票那样的回报。” 就目前来说，债券还是比股票便宜的。</h3><br>
-                <img class="titleimage" src="img/10Jan24.png" alt="dailynewspic" width=80%><br>
+    <section id="Opinions">
+        <div class="container-fluid color bkgd">
+            <h3>个人观点: 特朗普1月20日正式上任，据说他已经准备了100多个政令要上任后立即执行。
+                <br>
 
-              
-
-        <br>
-        <a class="btn btn-lg btn-primary" href="Calender-main.html">查看其他日期的新闻</a>
-    </div>
-</section>
+                <br>
 
 
 
-<section id="Appointment">
-    <div class="container-fluid">
+            </h3>
 
+            <a class="btn btn-lg btn-primary" href="Calender-main.html">查看其他日期的新闻</a>
+        </div>
+    </section>
 
-        <table cellspacing="20">
-            <tbody>
-                <tr>
-                    <td> <img src="fred-modified.png" alt="Fred Rong's profile pic" width="180px"></td>
-                    <td class="introduction"> <h2 >   Fred Rong <br>MAS Registered <br>RF-300558704  <br>
-                        投资咨询,欢迎预约！</h2>
-                        <a class="btn btn-lg btn-primary" href="Contact-me.html">立即预约</a> 
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-
+    <section id="Appointment">
+        <div class="container-fluid">
+            <table cellspacing="20">
+                <tbody>
+                    <tr>
+                        <td> <img src="fred-modified.png" alt="Fred Rong's profile pic" width="180px"></td>
+                        <td class="introduction">
+                            <h2> Fred Rong <br>MAS Registered <br>RF-300558704 <br>
+                                投资咨询,欢迎预约！</h2>
+                            <a class="btn btn-lg btn-primary" href="Contact-me.html">立即预约</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 </body>
-</html> 
+
+<script>
+    function formatDate(date) {
+        const day = date.getDate();
+        const month = date.getMonth() + 1; // Months are zero-based
+        return `${month}月${day}日`; // Format as "MM月DD日"
+    }
+
+    document.getElementById('news-date').textContent = formatDate(new Date());
+
+    // Get today's date in MM-DD format
+    function getTodaysDate() {
+        const today = new Date();
+        const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Add leading zero if needed
+        const day = today.getDate().toString().padStart(2, '0');
+        return `${month}-${day}`;
+    }
+
+    // Update the Bloomberg audio link
+    const audioLink = document.getElementById('bloomberg-audio-link');
+    audioLink.href = `https://omny.fm/shows/bloomberg-audio/${getTodaysDate()}`; 
+</script>
+
+
+
+
+</script>
+
+</html>
