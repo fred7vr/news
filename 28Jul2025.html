@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Free 财经频道</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <section id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-dark  ">
+                <a class="navbar-brand" href="index.html">Free News Channel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Calender-main.html">每日新闻 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="viewpoint.html">投资观点 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">常用工具 </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-12" style="border:none">
+                    <h1 class="daily-news-title"><span id="news-date"></span>早间新闻</h1>
+                    <h2>根据彭博社及路透社新闻编辑整合</h2>
+                    <a id="bloomberg-audio-link" class="btn btn-primary btn-lg d-inline-flex align-items-center gap-2"
+                        target="_blank" style="margin-top: 1rem;">
+                        <svg class="w-5 h-5" width="20" height="20" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        收听Bloomberg音频
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="daily-news">
+        <div class="container-fluid">
+            <h3>
+                <ol class="white-bkgd">
+                    <li>美国和欧盟周日宣布达成贸易协议，15%的关税将涵盖包括汽车在内的欧盟多数输美商品。</li>
+                    <br>
+
+                    <li>特朗普表示，欧盟同意购买7500亿美元美国能源产品和“大量”军事装备，承诺再向美国投资6000亿美元，并开放成员国市场、以零关税与美国进行贸易。
+                    </li><br>
+
+                    <li>泰国与柬埔寨领导人周一将在马来西亚吉隆坡举行和谈。此前，特朗普敦促双方停火，否则不会与两国任何一方达成贸易协议。</li><br>
+
+
+
+                    <li>高盛策略师表示，美股投机性交易活动为窄幅短线逼空行情火上浇油，增加了后期下跌风险。</li><br>
+
+                    <li>美中官员周一和周二将在瑞典斯德哥尔摩举行第三轮贸易谈判，有望延长关税“休战”，并扩大讨论范围。《南华早报》援引知情人士报道称，美中关税休战料延长三个月，两国在延长期内不会对彼此加征新的关税。
+                    </li><br>
+
+
+
+
+
+                </ol>
+            </h3>
+        </div>
+    </section>
+
+    <section id="Opinions">
+        <div class="container-fluid color bkgd">
+            <h3>个人观点:美欧协议也达成了，老特更加开心。话说，这么看，8月1日的第一波关税就要这么有惊无险的度过了么？东南亚目前也不会出什么幺蛾子了。
+
+
+
+
+                <br>
+
+
+
+                <br>
+
+                <img class="titleimage" src="img/22Jul2025.png" alt="dailynewspic" width=80%><br>
+
+            </h3>
+
+            <a class="btn btn-lg btn-primary" href="Calender-main.html">查看其他日期的新闻</a>
+        </div>
+    </section>
+
+
+
+    <script>
+        function formatDate(date) {
+            const day = date.getDate();
+            const month = date.getMonth() + 1; // Months are zero-based
+            return `${month}月${day}日`; // Format as "MM月DD日"
+        }
+
+        document.getElementById('news-date').textContent = formatDate(new Date());
+
+        // Get today's date in MM-DD format
+        function getTodaysDate() {
+            const today = new Date();
+            const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Add leading zero if needed
+            const day = today.getDate().toString().padStart(2, '0');
+            return `${month}-${day}`;
+        }
+
+        // Update the Bloomberg audio link
+        const audioLink = document.getElementById('bloomberg-audio-link');
+        audioLink.href = `https://omny.fm/shows/bloomberg-audio/${getTodaysDate()}`; 
+    </script>
+
+
+
+
+    </script>
+
+</html>
