@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <title>Fred's 财经频道</title>
+    <title>Free 财经频道</title>
     <link rel="icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -26,7 +26,7 @@
     <section id="title">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-dark  ">
-                <a class="navbar-brand" href="index.html">Fred's News Channel</a>
+                <a class="navbar-brand" href="index.html">Free News Channel</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -74,17 +74,17 @@
         <div class="container-fluid">
             <h3>
                 <ol class="white-bkgd">
-                    <li>拜登政府公布对英伟达及同类公司AI芯片出口实施新的全面限制，确立了向大部分国家出口的算力的上限。(这是针对在新加坡/马来西亚转运的吧？）</li>
+                    <li>美国12月核心CPI同比升幅追平四年来最低水平，进一步表明通胀正处于下行轨道。债市交易员强化了对年中降息的预期。</li>
                     <br>
 
-                    <li>英伟达最新款AI芯片的机架据报出现故障，微软等大客户面临交货延迟。（英伟达昨夜跌1.96%）</li><br>
+                    <li>世界银行提高今年全球和中国经济展望，称世界经济展现出令人意外的抗冲击能力。
+                    </li><br>
 
-                    <li>摩根大通将美联储今年降息次数预估从三次下调至两次，时间分别在6月和9月。</li><br>
+                    <li>特朗普呼吁伊朗民众继续进行对哈梅内伊所领导政权的抗议，并表示美国的援助正在途中。马斯克在伊朗断网期间提供免费星链服务。</li><br>
 
-                    <li>研究机构数据显示苹果去年第四季度全球iPhone销量下滑5%，部分市场份额被小米、Vivo等中国对手抢占。</li><br>
+                    <li>格陵兰排除加入美国可能性，总理暗示暂时搁置从丹麦独立的计划。据报特朗普的北极事务专员称美国可能在数周或数月内就格陵兰岛采取行动。</li><br>
 
-
-
+                    <li>Meta据悉拟将AI智能眼镜的产能翻倍，年产量或达2000万副。</li><br>
 
 
                 </ol>
@@ -94,9 +94,16 @@
 
     <section id="Opinions">
         <div class="container-fluid color bkgd">
-            <h3>个人观点: 昨夜，美股低开高走，从连跌中有所反弹，其中能源股与材料股领涨，科技股落后。这个现象，说明很多投资者对于美国经济都怀有谨慎的态度吧。
-                <br>
+            <h3>个人观点:反正也变成政治新闻了就聊点野的吧。据说伊朗的内乱已经被控制住了。怎么做到的呢，因为伊朗内部停止了互联网，然后马斯克提供星链支持。然后伊朗就派人看，哪里有寻求星链的上网申请，然后派车去抓。凡是有星链上网设备的一律按照美国间谍处理。结果一下子清了。
 
+                <br>
+                
+
+
+
+                <br>
+          
+           但我还是觉得美国会对伊朗做点啥。所以继续小心谨慎。
                 <br>
 
 
@@ -107,49 +114,33 @@
         </div>
     </section>
 
-    <section id="Appointment">
-        <div class="container-fluid">
-            <table cellspacing="20">
-                <tbody>
-                    <tr>
-                        <td> <img src="fred-modified.png" alt="Fred Rong's profile pic" width="180px"></td>
-                        <td class="introduction">
-                            <h2> Fred Rong <br>MAS Registered <br>RF-300558704 <br>
-                                投资咨询,欢迎预约！</h2>
-                            <a class="btn btn-lg btn-primary" href="Contact-me.html">立即预约</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-</body>
 
-<script>
-    function formatDate(date) {
-        const day = date.getDate();
-        const month = date.getMonth() + 1; // Months are zero-based
-        return `${month}月${day}日`; // Format as "MM月DD日"
-    }
 
-    document.getElementById('news-date').textContent = formatDate(new Date());
+    <script>
+        function formatDate(date) {
+            const day = date.getDate();
+            const month = date.getMonth() + 1; // Months are zero-based
+            return `${month}月${day}日`; // Format as "MM月DD日"
+        }
 
-    // Get today's date in MM-DD format
-    function getTodaysDate() {
-        const today = new Date();
-        const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Add leading zero if needed
-        const day = today.getDate().toString().padStart(2, '0');
-        return `${month}-${day}`;
-    }
+        document.getElementById('news-date').textContent = formatDate(new Date());
 
-    // Update the Bloomberg audio link
-    const audioLink = document.getElementById('bloomberg-audio-link');
-    audioLink.href = `https://omny.fm/shows/bloomberg-audio/${getTodaysDate()}`; 
-</script>
+        // Get today's date in MM-DD format
+        function getTodaysDate() {
+            const today = new Date();
+            const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Add leading zero if needed
+            const day = today.getDate().toString().padStart(2, '0');
+            return `${month}-${day}`;
+        }
+
+        // Update the Bloomberg audio link
+        const audioLink = document.getElementById('bloomberg-audio-link');
+        audioLink.href = `https://omny.fm/shows/bloomberg-audio/${getTodaysDate()}`; 
+    </script>
 
 
 
 
-</script>
+    </script>
 
 </html>
