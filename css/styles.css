@@ -428,6 +428,36 @@ h1.daily-news-title {
     background: #c8a850;
 }
 
+/* ========== Bottom Nav ========== */
+#bottom-nav {
+    background: #0c0e15;
+    border-top: 1px solid rgba(200, 180, 120, 0.15);
+    padding: 0.8rem 0;
+    text-align: center;
+}
+
+#bottom-nav .container-fluid {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.nav-link-bottom {
+    color: #d4c090;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(200, 180, 120, 0.15);
+}
+
+.nav-link-bottom:hover {
+    color: #f0dca0;
+    background: rgba(200, 170, 80, 0.1);
+    border-color: rgba(200, 180, 120, 0.3);
+}
+
 /* Selection */
 ::selection {
     background: rgba(200, 170, 80, 0.2);
