@@ -113,6 +113,13 @@ h1.daily-news-title {
 /* ========== Navigation Bar ========== */
 .navbar {
     padding: 0.5rem 0;
+    flex-wrap: nowrap;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
 }
 
 .navbar-brand {
