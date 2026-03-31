@@ -42,10 +42,15 @@ p {
             #1a2540 55%,
             #0f1520 100%);
     color: #e0e6ed;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid rgba(200, 180, 120, 0.15);
     position: relative;
     overflow: hidden;
+}
+
+#title .container-fluid {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 /* Metallic sheen overlay on hero */
@@ -69,11 +74,12 @@ p {
     pointer-events: none;
 }
 
-.daily-news-title {
-    font-size: 1.6rem;
+h1.daily-news-title {
+    font-size: 2.2rem !important;
     color: #fff;
-    line-height: 1.4;
-    margin-top: 0.8rem;
+    line-height: 1.3;
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
     font-weight: 700;
     background: linear-gradient(135deg, #f0e6d0 0%, #c8a850 30%, #f5edd5 50%, #b8952a 70%, #e8d9a8 100%);
     background-size: 200% auto;
@@ -144,15 +150,29 @@ p {
 #daily-news {
     background: linear-gradient(180deg, #141824 0%, #1a2035 50%, #1e2640 100%);
     position: relative;
-    padding: 1rem 0;
+    padding: 0.3rem 0;
+}
+
+#daily-news .container-fluid {
+    padding-top: 0.3rem;
+    padding-bottom: 0;
+}
+
+#daily-news h3 {
+    margin-bottom: 0;
+}
+
+/* Hide br tags inside news list */
+.white-bkgd br {
+    display: none;
 }
 
 /* Metallic card for news items */
 .white-bkgd {
-    background: linear-gradient(165deg, #232b42 0%, #1e2538 40%, #283050 100%);
+    background: linear-gradient(165deg, #354870 0%, #304568 40%, #3a5078 100%);
     border: 1px solid rgba(200, 180, 120, 0.15);
     border-radius: 12px;
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 1rem;
     box-shadow:
         0 4px 20px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.06);
@@ -180,37 +200,53 @@ p {
 }
 
 .white-bkgd li {
-    padding: 0.8rem 1rem;
-    margin: 0.4rem 0;
+    padding: 0.4rem 0.8rem;
+    margin: 4px 0;
     border-bottom: none;
-    line-height: 1.9;
-    font-size: 0.88rem;
+    line-height: 1.8;
+    font-size: 1rem;
     color: #dce1ea;
     border-radius: 8px;
     border-left: 3px solid transparent;
+    border-bottom: 2px solid transparent;
     transition: all 0.2s ease;
 }
 
-.white-bkgd li:nth-child(odd) {
-    background: rgba(255, 255, 255, 0.03);
-    border-left-color: rgba(200, 170, 80, 0.3);
+.white-bkgd li:nth-of-type(odd) {
+    background: rgba(10, 12, 20, 0.5);
+    border-left-color: #c8a850;
+    border-bottom-color: rgba(200, 170, 80, 0.4);
+    box-shadow: inset 3px 0 8px rgba(200, 170, 80, 0.08), 0 2px 4px rgba(200, 170, 80, 0.1);
 }
 
-.white-bkgd li:nth-child(even) {
-    background: rgba(100, 160, 255, 0.04);
-    border-left-color: rgba(100, 180, 255, 0.3);
+.white-bkgd li:nth-of-type(even) {
+    background: rgba(10, 12, 20, 0.5);
+    border-left-color: #c8a850;
+    border-bottom-color: rgba(200, 170, 80, 0.4);
+    box-shadow: inset 3px 0 8px rgba(200, 170, 80, 0.08), 0 2px 4px rgba(200, 170, 80, 0.1);
 }
 
 .white-bkgd li:hover {
-    background: rgba(200, 180, 120, 0.07);
-    border-left-color: #c8a850;
+    background: rgba(200, 180, 120, 0.12);
+    border-left-color: #e0c060;
+    border-bottom-color: rgba(200, 170, 80, 0.5);
 }
 
 /* ========== Opinions section ========== */
 #Opinions {
-    background: linear-gradient(160deg, #1a2238 0%, #212a42 50%, #1e2640 100%);
+    background: linear-gradient(160deg, #0d1018 0%, #111520 50%, #0e1218 100%);
     color: #e0e6ed;
-    padding: 1.5rem 0;
+    padding: 0.3rem 0;
+    border-top: 1px solid rgba(200, 180, 120, 0.15);
+}
+
+#Opinions .container-fluid {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#Opinions br {
+    display: none;
     border-top: 1px solid rgba(200, 180, 120, 0.1);
     position: relative;
 }
@@ -224,7 +260,7 @@ p {
     height: 1px;
     background: linear-gradient(90deg,
         transparent,
-        rgba(200, 180, 130, 0.25),
+        rgba(200, 180, 130, 0.15),
         transparent
     );
 }
@@ -234,7 +270,8 @@ p {
     border-radius: 10px;
     padding: 1rem 1.2rem;
     border-left: 3px solid #c8a850;
-    font-size: 0.88rem;
+    font-size: 0.95rem;
+    color: #e0e6ed;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
 }
 
